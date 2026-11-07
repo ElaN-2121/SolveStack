@@ -177,3 +177,11 @@ a.challenge-title:hover { color: var(--green); text-decoration: underline; }
 .badge-soon { background: rgba(251, 191, 36, 0.1); color: var(--amber); border: 1px solid rgba(251, 191, 36, 0.4); }
 .footer { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 20px 24px; border-top: 1px solid var(--line); }
 a.btn { text-decoration: none; }
+
+
+.chip-streak { color: var(--muted); text-decoration: none; }
+.chip-streak-on { color: var(--green); border-color: rgba(57, 255, 136, 0.5); }
+.streak-number { margin: 8px 0 0; font-size: 2.4rem; font-weight: 800; }
+.msg-ok { color: var(--green); margin: 8px 0 0; }
+.check-row { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+.check-row input { width: 18px; height: 18px; accent-color: var(--green); }

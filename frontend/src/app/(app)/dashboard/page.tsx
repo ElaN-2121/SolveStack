@@ -1,14 +1,12 @@
 import ProfileCard from "@/components/ProfileCard";
+import StreakCard from "@/components/StreakCard";
 
 export default function DashboardPage() {
   return (
     <main className="wrap">
       <ProfileCard />
       <section className="grid-2">
-        <div className="card">
-          <h2>Daily mission</h2>
-          <p className="muted">Coming soon: a fresh challenge goal every day.</p>
-        </div>
+        <StreakCard />
         <div className="card">
           <h2>Recent solves</h2>
           <div className="empty">

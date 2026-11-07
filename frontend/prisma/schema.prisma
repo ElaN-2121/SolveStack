@@ -20,6 +20,24 @@ model User {
   accounts   Account[]
   sessions   Session[]
   challenges Challenge[]
+   timezone        String   @default("Africa/Addis_Ababa")
+  reminderEnabled Boolean  @default(false)
+  reminderHour    Int      @default(20)
+  lastReminderOn  String?  // "YYYY-MM-DD" in the user's timezone; used by reminders in a later phase
+    pushSubscriptions PushSubscription[]
+}
+
+model PushSubscription {
+  id        String   @id @default(cuid())
+  userId    String
+  endpoint  String   @unique
+  p256dh    String
+  auth      String
+  userAgent String?
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
 }
 
 model Account {
